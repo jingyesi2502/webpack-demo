@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="../build/react.js"></script>
+<script src="../build/react-dom.js"></script>
+<script src="../build/browser.min.js"></script>
+
+</head>
+<body>
+
+<div id="dom1"></div>
+<script type="text/javascript">
+// React.Children.map(this.props.children, function(child){
+// 	return <li>{child}</li>
+// })
+
+// this.props.children.map(function(child){
+// 	return <li>{child} - #</li>;
+// })
+</script>
+<script type="text/babel">
+
+var ListMsg = React.createClass({
+	render : function(){
+		return <ul>
+			{
+React.Children.map(this.props.children, function(child){
+	return <li>{child}</li>;
+})
+			}
+		</ul>;
+	}
+});
+
+ReactDOM.render(
+	<ListMsg>
+		<h1>a</h1>
+		<h1>b</h1>
+		<h1>c</h1>
+	</ListMsg>,
+	document.getElementById('dom1')
+);
+</script>
+
+</body>
+</html>

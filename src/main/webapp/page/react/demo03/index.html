@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="../build/react.js"></script>
+<script src="../build/react-dom.js"></script>
+<script src="../build/browser.min.js"></script>
+
+</head>
+<body>
+
+<div id="dom1"></div>
+<script type="text/babel">
+var ary = [
+	<h1>name</h1>,
+	<h2>age</h2>
+];
+ReactDOM.render(
+	<div>{ary}</div>,
+	document.getElementById('dom1')
+);
+</script>
+
+</body>
+</html>

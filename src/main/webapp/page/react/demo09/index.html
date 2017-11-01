@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="../build/react.js"></script>
+<script src="../build/react-dom.js"></script>
+<script src="../build/browser.min.js"></script>
+
+</head>
+<body>
+
+<div id="dom1"></div>
+
+<script type="text/babel">
+
+var Inp = React.createClass({
+	propTypes : {
+		title : React.PropTypes.string.isRequired
+	},
+	getDefaultProps : function(){
+		return {
+			title : 'Ms wang'
+		}
+	},
+	getInitialState : function(){
+		return {
+			like : true,
+			value : '123'
+		};
+	},
+	click : function(event){
+		this.setState({like:!this.state.like});
+	},
+	change : function(event){
+		this.setState({value : event.target.value});
+	},
+	render : function(){
+		return (<div>
+				<input type="text" value={this.state.value} onChange={this.change} />
+				<h2>{this.state.value}</h2>
+			</div>);
+	}
+});
+
+ReactDOM.render(
+	<Inp />,
+	document.getElementById('dom1')
+);
+</script>
+
+</body>
+</html>

@@ -79,7 +79,7 @@ eval("// Greeter.js\r\nvar config = __webpack_require__(2);\r\n\r\nmodule.export
 /* 2 */
 /***/ (function(module, exports) {
 
-eval("module.exports = {\"greetText\":\"Hi there and greetings from JSON!\"}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3BhZ2Uvbm9ybWFsL2pzL2NvbmZpZy5qc29uPzlhYzkiXSwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSB7XCJncmVldFRleHRcIjpcIkhpIHRoZXJlIGFuZCBncmVldGluZ3MgZnJvbSBKU09OIVwifVxuXG5cbi8vLy8vLy8vLy8vLy8vLy8vL1xuLy8gV0VCUEFDSyBGT09URVJcbi8vIC4vcGFnZS9ub3JtYWwvanMvY29uZmlnLmpzb25cbi8vIG1vZHVsZSBpZCA9IDJcbi8vIG1vZHVsZSBjaHVua3MgPSAwIl0sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIifQ==\n//# sourceURL=webpack-internal:///2\n");
+eval("module.exports = {\"greetText\":\"Hi there and greetings from JSON in github 22 !\"}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiMi5qcyIsInNvdXJjZXMiOlsid2VicGFjazovLy8uL3BhZ2Uvbm9ybWFsL2pzL2NvbmZpZy5qc29uPzlhYzkiXSwic291cmNlc0NvbnRlbnQiOlsibW9kdWxlLmV4cG9ydHMgPSB7XCJncmVldFRleHRcIjpcIkhpIHRoZXJlIGFuZCBncmVldGluZ3MgZnJvbSBKU09OIGluIGdpdGh1YiAyMiAhXCJ9XG5cblxuLy8vLy8vLy8vLy8vLy8vLy8vXG4vLyBXRUJQQUNLIEZPT1RFUlxuLy8gLi9wYWdlL25vcm1hbC9qcy9jb25maWcuanNvblxuLy8gbW9kdWxlIGlkID0gMlxuLy8gbW9kdWxlIGNodW5rcyA9IDAiXSwibWFwcGluZ3MiOiJBQUFBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///2\n");
 
 /***/ })
 /******/ ]);
