@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="../build/react.js"></script>
+<script src="../build/react-dom.js"></script>
+<script src="../build/browser.min.js"></script>
+
+</head>
+<body>
+
+<div id="dom1"></div>
+
+<script type="text/babel">
+
+var Name = React.createClass({
+	propTypes : {
+		title : React.PropTypes.string.isRequired
+	},
+	getDefaultProps : function(){
+		return {
+			title : 'Ms wang'
+		}
+	},
+	render : function(){
+		return <div>{this.props.title}</div>;
+	}
+});
+
+var zhang = "2";
+ReactDOM.render(
+	<Name />,
+	<Name title={zhang} />,
+	document.getElementById('dom1')
+);
+</script>
+
+</body>
+</html>

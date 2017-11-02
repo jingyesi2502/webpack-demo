@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="../build/react.js"></script>
+<script src="../build/react-dom.js"></script>
+<script src="../build/browser.min.js"></script>
+<script src="../build/jquery.min.js"></script>
+
+</head>
+<body>
+
+<div id="dom1"></div>
+
+<script type="text/babel">
+
+var Inp = React.createClass({
+	propTypes : {
+		title : React.PropTypes.string.isRequired
+	},
+	getDefaultProps : function(){
+		return {
+			title : 'Ms wang'
+		}
+	},
+	getInitialState : function(){
+		return {
+			like : true,
+			value : '123',
+			opacity : 1.0,
+			name : '',
+			url : ''
+		};
+	},
+	click : function(event){
+		this.setState({like:!this.state.like});
+	},
+	change : function(event){
+		this.setState({value : event.target.value});
+	},
+	componentDidMount : function(){
+		$.get(this.props.source, function(data){
+			var lastGist = data[0];
+			if (this.isMounted()) {
+				this.setState({
+					name: lastGist.owner.login,
+          			url: lastGist.html_url
+				});
+			}
+		}.bind(this));
+	},
+	render : function(){
+		return (<div>
+				{this.state.name}'s last gist is
+        		<a href={this.state.url}>{this.state.url}</a>.
+			</div>);
+	}
+});
+
+ReactDOM.render(
+	<Inp source="https://api.github.com/users/octocat/gists" />,
+	document.getElementById('dom1')
+);
+</script>
+
+</body>
+</html>

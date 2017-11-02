@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script src="../build/react.js"></script>
+<script src="../build/react-dom.js"></script>
+<script src="../build/browser.min.js"></script>
+
+</head>
+<body>
+
+<div id="dom1"></div>
+
+<script type="text/babel">
+
+var Inp = React.createClass({
+	propTypes : {
+		title : React.PropTypes.string.isRequired
+	},
+	getDefaultProps : function(){
+		return {
+			title : 'Ms wang'
+		}
+	},
+	btnClick : function(){
+		this.refs.inp.focus();
+	},
+	render : function(){
+		return (<div>
+				<input type="text" ref="inp" />
+				<button onClick={this.btnClick}>click me</button>
+				</div>);
+	}
+});
+
+var zhang = "2";
+ReactDOM.render(
+	<Inp />,
+	document.getElementById('dom1')
+);
+</script>
+
+</body>
+</html>
